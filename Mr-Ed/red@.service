@@ -1,0 +1,12 @@
+[Unit]
+Requires=red.socket
+
+[Service]
+WorkingDirectory=/home/reduser
+ExecStart=/bin/red
+User=reduser
+Group=reduser
+StandardInput=socket
+
+[Install]
+WantedBy=multi-user.target
