@@ -1,0 +1,18 @@
+Install:
+
+# adduser reduser
+# apt-get install ed
+# cp red@.service red.socket /etc/systemd/system
+# chmod u-w /home/reduser
+# cp flag.txt /home/reduser
+# systemctl daemon-reload
+# systemctl enable red.socket
+# systemctl start red.socket
+
+Test:
+
+$ nc localhost 1971
+e flag.txt
+32
+1,$p
+flag{but_vim_is_harder_to_quit}
